@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config>
+  <XML_version>1.21</XML_version>
+  <network_config>
+     <ethernet_portMgmt>
+      <!--
+        dhcp_portMgmt:
+          "enable"
+          "disable"
+      -->
+      <dhcp_portMgmt>enable</dhcp_portMgmt>
+      <!--
+        ipaddr_portMgmt:
+          "xxx.xxx.xxx.xxx"
+          ""
+      -->
+      <ipaddr_portMgmt/>
+      <!--
+        subnet_portMgmt:
+          "xxx.xxx.xxx.xxx"
+          ""
+      -->
+      <subnet_portMgmt/>
+      <!--
+        gateway_portMgmt:
+          "xxx.xxx.xxx.xxx"
+          ""
+      -->
+      <gateway_portMgmt/>
+    </ethernet_portMgmt>
+    
+    <ethernet_port1>
+      <auto_nego_port1>1000F</auto_nego_port1>
+      <!--
+        dhcp_port1:
+          "enable"
+          "disable"
+      -->
+      <dhcp_port1>enable</dhcp_port1>
+      <!--
+        ipaddr_port1:
+          "xxx.xxx.xxx.xxx"
+          ""
+      -->
+      <ipaddr_port1/>
+      <!--
+        subnet_port1:
+          "xxx.xxx.xxx.xxx"
+          ""
+      -->
+      <subnet_port1/>
+      <!--
+        gateway_port1:
+          "xxx.xxx.xxx.xxx"
+          ""
+      -->
+      <gateway_port1/>
+      <!--
+         vlan_port1:
+         "off"
+         "none"
+         "0"-"4094"
+     -->
+     <vlan_port1>off</vlan_port1>
+      <!--
+         pri_code_port1:
+         "0" -"7"
+     -->
+     <pri_code_port1/>
+    </ethernet_port1>
+    <ethernet_port2>
+      <auto_nego_port2>1000F</auto_nego_port2>
+      <!--
+        ipaddr_port2:
+          "xxx.xxx.xxx.xxx"
+          ""
+      -->
+      <ipaddr_port2/>
+      <!--
+        subnet_port2:
+          "xxx.xxx.xxx.xxx"
+          ""
+      -->
+      <subnet_port2/>
+      <!--
+        gateway_port2:
+          "xxx.xxx.xxx.xxx"
+          ""
+      -->
+      <gateway_port2/>
+      <!--
+         vlan_port2:
+         "off"
+         "none"
+         "0"-"4094"
+     -->
+     <vlan_port2>off</vlan_port2>
+      <!--
+         pri_code_port2:
+         "0" - "7"
+     -->
+     <pri_code_port2/>
+ 
+    </ethernet_port2>
+  </network_config>
+  <security>
+    <!--
+       https:
+          "enable"
+          "disable"
+    -->
+    <https>disable</https>
+  </security>
+  <profile_data>
+  <system>
+	  <!---
+	  -->
+    <main_time_constant>1</main_time_constant>
+	  <!---
+	  -->
+    <startup_time_constant>100</startup_time_constant>
+	  <!---
+	  -->
+    <quality_threshold>1500</quality_threshold>
+	  <!---
+      Network Type:
+        "unmanaged"
+        "managed"
+	  -->
+    <network_type>full-on-path</network_type>
+    <!--
+      option_type : EEC-option-1
+                    EEC-option-2    
+                    eEEC-option-1
+                    eEEC-option-2
+    -->
+    <option_type>EEC_option-1</option_type>
+    <!--
+        Frequency Out:
+          "8 kHz"
+          "1544 kHz"
+          "2048 kHz"
+          "10 MHz"
+          "19.44 MHz"
+          "20 MHz"
+          "25 MHz"
+          "125 MHz"
+          "155.52 MHz"
+          "156.25 MHz"
+    -->
+    <freq_out>10 MHz</freq_out>
+    <!--
+       passthrough:
+          "enable"
+          "disable"
+    -->
+    <passthrough>disable</passthrough>
+    <!--
+      synce :
+        "off"
+        "GM - GNSS Source"
+        "BC - Port-1 Source"
+        "BC - Port-2 Source"
+    -->
+   <synce>GM - GNSS Source</synce>
+    <!--
+        Profile :
+            "default"
+            "g8275.1"
+            "g8275.2"
+            "g8265.1"
+            "power.v1"
+            "power.v2"
+            "power.utility"
+    -->
+   <!--
+      system_operatingMode: 
+        "Stopped"
+        "PTP Only"
+        "GPS Only"
+        "GPS Primary, PTP Secondary"
+        "PTP Primary, GPS Secondary"
+    -->
+    <system_operatingMode>GPS Only</system_operatingMode>
+  </system>
+  <ptp>
+    <Clock>
+       <!--
+           Profile :
+            "default"
+            "g8275.1"
+            "g8275.2"
+            "g8265.1"
+            "power.v1"
+            "power.v2"
+            "power.utility"
+       -->
+       <profile>g8275.1</profile>
+       <!--
+          g8275_pri :
+              "1 .. 255"
+       -->
+       <g8275_pri>128</g8275_pri>
+       <!--
+          g8275_msr :
+              "1 .. 255"
+       -->
+       <g8275_msr>255</g8275_msr>
+       <!--
+          g8275_port_pri :
+              "1 .. 255"
+       -->
+       <g8275_port_pri>128</g8275_port_pri>
+       <!--
+          g8275_port_masteronly :
+              "off"
+              "on"
+       -->
+       <g8275_port_masteronly>on</g8275_port_masteronly>
+       <!--
+        user_desc:
+          "xxx"
+      -->
+      <user_desc/>
+      <!--
+        clock_mode:
+          "Ordinary"
+          "Boundary"
+      -->
+      <clock_mode>Ordinary Clock</clock_mode>
+      <!--
+        slave_mode:
+          "Disable"
+          "Enable"
+      -->
+      <slave_mode>Disable</slave_mode>
+      <!--
+        two_step:
+          "on"
+          "off"
+      -->
+      <two_step>on</two_step>
+	  <!--
+        clock_class:
+          "248"
+      -->
+      <clock_class>248</clock_class>
+	  <!--
+        clock_accuracy:
+          "254"
+      -->
+      <clock_accuracy>254</clock_accuracy>
+	  <!--
+        clock_variance:
+          "65535"
+      -->
+      <clock_variance>65535</clock_variance>
+	  <!--
+        clock_priority1:128
+      -->
+      <clock_priority1>128</clock_priority1>
+	  <!--
+        clock_priority2:128
+      -->
+      <clock_priority2>128</clock_priority2>
+      <!--
+        domain_number:24-43
+      -->
+      <domain_number>24</domain_number>
+    </Clock>
+    <port>
+      <port1>
+        <!--
+          enable:
+            "enable"
+            "disable"
+        -->
+        <port_enable1>enable</port_enable1>
+        <!--
+          multicast_L2DA:
+            "forwardable"
+            "non-forwardable"
+            "forwardable only"
+            "non-forwardable only"
+        -->
+        <multicast_L2DA1>forwardable</multicast_L2DA1>
+        <!--
+          delay_mechanism:
+            "e2e"
+            "p2p"
+        -->
+        <delay_mechanism1>e2e</delay_mechanism1>
+        <!--
+          network_protocol:
+            "udp"
+            "eth"
+            "udp6"
+        -->
+        <network_protocol1>eth</network_protocol1>
+        <!--
+          Network Asymmetry (secs):
+            "0"
+        -->
+        <network_asymmetry1>0</network_asymmetry1>
+        <!--
+          sync_interval:
+            "0"
+        -->
+        <sync_interval1>-4</sync_interval1>
+        <!--
+          delay_request_interval:
+            "0"
+        -->
+        <delay_request_interval1>-4</delay_request_interval1>
+        <!--
+          pdelay_request_interval:0
+        -->
+        <pdelay_request_interval1>0</pdelay_request_interval1>
+        <!--
+          announce_interval:1
+        -->
+        <announce_interval1>-3</announce_interval1>
+        <!--
+          announce_timeout:3
+        -->
+        <announce_timeout1>3</announce_timeout1>
+        <!--
+          unicast_operation:
+            "disabled"
+            "master"
+            "slave"
+            "master_slave"
+            "mixed"
+        -->
+        <unicast_operation1>disabled</unicast_operation1>
+        <!--
+         dscp - differentiated services code point 
+          0 to 63
+        -->
+        <dscp1/>
+        <!--
+          mixmode_pdelay1:
+            "auto"
+            "unicast"
+        -->
+         <mixmode_pdelay1>auto</mixmode_pdelay1>
+      </port1>
+      <port2>
+        <!--
+          enable:
+            "enable"
+            "disable"
+        -->
+        <port_enable2>enable</port_enable2>
+        <!--
+          multicast_L2DA:
+            "forwardable"
+            "non-forwardable"
+            "forwardable only"
+            "non-forwardable only"
+        -->
+        <multicast_L2DA2>forwardable</multicast_L2DA2>
+        <!--
+          delay_mechanism:
+            "e2e"
+            "p2p"
+        -->
+        <delay_mechanism2>e2e</delay_mechanism2>
+        <!--
+          network_protocol:
+            "udp"
+            "eth"
+            "udp6"
+        -->
+        <network_protocol2>eth</network_protocol2>
+        <!--
+          Network asymmetry (secs)
+            "0"
+        -->
+        <network_asymmetry2>0</network_asymmetry2>
+        <!--
+          sync_interval:0
+            "xxx"
+        -->
+        <sync_interval2>-4</sync_interval2>
+        <!--
+          delay_request_interval:
+            "0"
+        -->
+        <delay_request_interval2>-4</delay_request_interval2>
+        <!--
+          pdelay_request_interval:0
+        -->
+        <pdelay_request_interval2>0</pdelay_request_interval2>
+        <!--
+          announce_interval:1
+        -->
+        <announce_interval2>-3</announce_interval2>
+        <!--
+          announce_timeout:3
+        -->
+        <announce_timeout2>3</announce_timeout2>
+        <!--
+          unicast_operation:
+            "disabled"
+            "master"
+            "slave"
+            "master_slave"
+            "mixed"
+        -->
+        <unicast_operation2>disabled</unicast_operation2>
+        <!--
+         dscp - differentiated services code point 
+          0 to 63
+        -->
+        <dscp2/>
+        <!--
+          mixmode_pdelay2:
+            "auto"
+            "unicast"
+        -->
+         <mixmode_pdelay2>auto</mixmode_pdelay2>
+      </port2>
+    </port>
+    <unicast>
+      <port1>
+        <!--
+          Negotiation:
+            "off"
+            "on"
+        -->
+        <Negotiation1>on</Negotiation1>
+        <!--
+          Transmission_duration:300
+        -->
+        <Transmission_duration1>300</Transmission_duration1>
+      </port1>
+      <port2>
+        <unicast_status2/>
+        <!--
+          Negotiation:
+            "off"
+            "on"
+        -->
+        <Negotiation2>on</Negotiation2>
+        <!--
+          Transmission_duration:300
+        -->
+        <Transmission_duration2>300</Transmission_duration2>
+      </port2>
+    </unicast>
+    <master_node_type>
+      <port1>
+      </port1>
+      <port2>
+      </port2>
+    </master_node_type>
+    <sntp>
+      <!--
+        SNTP mode :
+         "Stopped"
+         "Unicast"
+         "Manycast"
+         "Broadcast"
+         "Mixed"
+      -->
+      <sntp_mode>Stopped</sntp_mode>
+      <!--
+        Broadcast interval (s):4, 16 seconds
+      -->
+      <sntp_broadcast>4</sntp_broadcast>
+      <!--
+        Multicast ttl : 1
+      -->
+      <sntp_ttl>1</sntp_ttl>
+    </sntp>
+    <time>
+      <!--
+        Holdover Period (s):0
+      -->
+      <holdover_period>1000</holdover_period>
+    </time>
+  </ptp>
+  </profile_data>
+  <snmp>
+    <readonly_comm/>
+    <sysname/>
+    <sysloc/>
+    <syscontact/>
+  </snmp>
+  <interface>
+    <tod_oneppsinput>
+      <!--
+        constellation:
+          "GPS Only"
+          "GPS+GLONASS"
+          "GPS+BEIDOU"
+          "GPS+GALILEO"
+      -->
+      <constellation>GPS Only</constellation>
+      <!--
+        oneppsin:
+          "enable"
+          "disable"
+      -->
+      <oneppsin>enable</oneppsin>
+      <!--
+        todin:
+          "enable"
+          "disable"
+      -->
+      <todin>enable</todin>
+      <!--
+        oneppsin_delay (ns):
+      -->
+      <oneppsin_delay/>
+      <!--
+        oneppsin_format:
+          "NMEA"
+          "ASCII"
+          "China Mobile"
+      -->
+      <todin_format>NMEA</todin_format>
+      <!--
+        todin_flag:
+          "ignore"
+          "syntonize"
+          "holdover"
+      -->
+      <todin_flag>holdover</todin_flag>
+      <!--
+        tod1pps_src:
+          "internal"
+          "external"
+      -->
+      <tod1pps_src>internal</tod1pps_src>
+      <!--
+        active_clock_class:
+          "0-255"
+      -->
+      <active_clock_class>6</active_clock_class>
+      <!--
+        holdover_clock_class:
+          "0-255"
+      -->
+      <holdover_clock_class>7</holdover_clock_class>
+      <!--
+        freerun_clock_class:
+          "0-255"
+      -->
+      <freerun_clock_class>52</freerun_clock_class>
+ 
+      <!--
+        todin_ext_baud:
+          "4800"
+          "9600"
+          "14400"
+          "19200"
+          "28800"
+          "38400"
+          "57600"
+          "115200"
+      -->
+      <todin_ext_baud>9600</todin_ext_baud>
+    </tod_oneppsinput>
+    <tod_oneppsOutput>
+      <!--
+        onepps_state:
+          "Start"
+          "Stop"
+      -->
+      <onepps_state>Stop</onepps_state>
+      <!--
+        onepps_period (us):
+          "1000000"
+      -->
+      <onepps_period>1000000</onepps_period>
+      <!--
+        onepps_pulsewidth (us):
+          "100000"
+      -->
+      <onepps_pulsewidth>100000</onepps_pulsewidth>
+      <!--
+        onepps_mode:
+          "sync"
+          "holdover"
+          "always"
+      -->
+      <onepps_mode>always</onepps_mode>
+      <!--
+        onepps_errtolerance (ns):
+          "0"
+      -->
+      <onepps_errtolerance>0</onepps_errtolerance>
+      <!--
+        oneppsauto_restart:
+          "on"
+          "off"
+      -->
+      <oneppsauto_restart>on</oneppsauto_restart>
+      <!--
+        onepps_delay (ns):
+          "0"
+      -->
+      <onepps_delay>0</onepps_delay>
+      <!--
+        tod_format:
+          "NMEA"
+          "ASCII"
+          "China Mobile"
+      -->
+      <tod_format>NMEA</tod_format>
+      <!--
+        tod_subformat:
+          "RMC"
+	        "ZDA"
+	        "Both"
+      -->
+      <tod_subformat>Both</tod_subformat>
+      <!--
+        tod_flag:
+          "Never"
+          "Free"
+          "Holdover"
+      -->
+      <tod_flag>Holdover</tod_flag>
+      <!--
+        tod_timezone:
+          "None"
+          "TZ"
+          "TZ_DST"
+      -->
+      <tod_timezone>None</tod_timezone>
+      <!--
+         tod out timezone: (offset) "time zone"
+           (-11.0) =  "MIT"
+           (-10.0) =  "HST"
+           (-9.0) =  "AST"
+           (-8.0) =  "PST"
+           (-7.0) =  "MST"
+           (-6.0) =  "CST"
+           (-5.0) =  "EST"
+           (-4.0) =  "PRT"
+           (-3.5) =  "CNT"
+           (-3.0) =  "AGT"
+           (0.0) =   "UTC"
+           (1.0) =  "CET"
+           (2.0) =  "EET"
+           (3.0) =  "EAT"
+           (3.5) =  "MET"
+           (4.0) =  "NET"
+           (5.0) =  "PLT"
+           (5.5) =  "IST"
+           (6.0) =  "BST"
+           (7.0) =  "VST"
+           (8.0) =  "CTT"
+           (9.0) =  "JST"
+           (9.5) =  "ACT"
+           (10.0) =  "AET"
+           (11.0) =  "SST"
+           (12.0) =  "NST"
+      -->
+      <tod_out_timezone/>
+      <!--
+       MMODHHmm-MMODHHmm
+       MM - Month
+       O  - Occurence
+       D  - Day
+       HH - Hour
+       mm - Minutes
+      -->
+      <tod_out_dst>-</tod_out_dst>
+      <!--
+        todout_baud:
+          "4800"
+          "9600"
+          "14400"
+          "19200"
+          "28800"
+          "38400"
+          "57600"
+          "115200"
+      -->
+      <todout_baud>9600</todout_baud>
+    </tod_oneppsOutput>
+  </interface>
+
+</Config>
