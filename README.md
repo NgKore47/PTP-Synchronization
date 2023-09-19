@@ -11,4 +11,4 @@ If don't want to manullay change the values and configurations:
 
 ## Several method Options:
 1. For Falcon-RX with vlan 564, C3 tested with OAI-Liteon: [Falcon_vlan564_c3_liteon_oai.md](./docs/Falcon_vlan564_c3_liteon_oai.md)
-2. For qulsar: (to be updated)
+2. For qulsar: [Qulsar_Qg2.md](./docs/Qulsar_Qg2.md)
