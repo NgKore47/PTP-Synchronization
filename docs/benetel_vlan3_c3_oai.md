@@ -1,12 +1,12 @@
-# Falcon test with OAI-liteon C3 with vlan 564
+# Benetel-OAI setup
 
 ## General Information
-* Vlan 564 for C/U plane
+* Vlan 3 for C/U plane
 * Default Vlan for PTP packets
 
 > You can use any port(in current scenario Port 19 and 20 are being used)
 
-* Port 19 connected to Liteon O-RU
+* Port 19 connected to Benetel O-RU
 * Port 20 connected to O-DU sever
 
 ## PTP Clock configuration
@@ -33,13 +33,19 @@ Then click on apply.
 
 ![falcon_ptp_config](../images/falcon_c3_vlan564_liteon_oai/falcon1_c3_vlan564_liteon_oai.png)
 
-
-
 ## VLAN configuration:
 * Use mode trunk with untag port vlan
-* Use vlan 1588(that was set in VID for ptp clock instance) and can use anything other 564(because 564 will be used for liteon c-u plane packets)
-* Added 1, 564, 1588 in general allowed vlans
-* Added only 564 & 1588 in allowed vlans and nothing else for port 19 and 20
+* Use vlan 1588(that was set in VID for ptp clock instance) and can use anything other than 3(because 3 will be used for benetel c-u plane packets)
+* Added 1, 3, 1588 in general allowed vlans(564 is also there but that is for liteon i.e. irrelevant in case of benetel)
+* Added only 3 & 1588 in allowed vlans and nothing else for port 19 and 20
 
 
-![falcon_vlan_config](../images/falcon_c3_vlan564_liteon_oai/falcon2_c3_vlan564_liteon_oai.png)
+![falcon_vlan_config](../images/Benetel_vlan_3/vlan_bentel_3.jpg)
+
+
+## Additional Information
+
+You can setup port 20 for both liteon and benetel configuration together.
+You just need to add both the vlan i.e 3 and 564 in the Allowed Vlans section of the port 20
+
+![both_vlan](../images/Benetel_vlan_3/liteon_and_bentel_port20_vlan.png)
